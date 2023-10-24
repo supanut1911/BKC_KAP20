@@ -1,0 +1,23 @@
+{
+  "name": "fin-x-samret",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@types/chai": "^4.3.7",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "^20.8.4",
+    "chai": "^4.3.10",
+    "dotenv": "^16.3.1",
+    "hardhat": "^2.18.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
