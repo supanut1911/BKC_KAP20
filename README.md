@@ -1,13 +1,25 @@
-# Sample Hardhat Project
+# hardhat cli
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
+Compile
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+$ npx hardhat compile
 ```
+
+Deploy
+
+```shell
+$ npx hardhat run --network {network_name} {path_of_script_deploy}
+
+example
+$ npx hardhat run --network bkc_testnet scripts/deploy.ts
+
+```
+
+Flatten
+
+```shell
+$ npx hardhat flatten > Flattened.sol
+```
+
+\*ps need to specific the version of solidity in the code contract (for verify) as match as solidiry_version in hardhat.config.ts

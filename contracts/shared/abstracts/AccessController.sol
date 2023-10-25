@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 // Sources flattened with hardhat v2.9.3 https://hardhat.org
 
-pragma solidity ^0.8.0;
+pragma solidity 0.8.18;
 
 import "../abstracts/KYCHandler.sol";
 import "../abstracts/Committee.sol";
