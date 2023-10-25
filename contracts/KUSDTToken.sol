@@ -16,7 +16,7 @@ import "./shared/abstracts/Ownable.sol";
 import "./shared/interfaces/IExecutorEnv.sol";
 import "./shared/interfaces/IKAP20/IKAP20SDK.sol";
 
-contract NUTToken is KAP20, Ownable {
+contract KUSDTToken is KAP20, Ownable {
     constructor(
     address _kyc,
     address _committee,
@@ -24,8 +24,8 @@ contract NUTToken is KAP20, Ownable {
     uint256 _acceptedKycLevel
     )
     KAP20(
-        "NUT Token",
-        "NUT",
+        "Wrapped USDT",
+        "KUSDT",
         18,
         _kyc,
         _committee,

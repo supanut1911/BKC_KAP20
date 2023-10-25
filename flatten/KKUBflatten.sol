@@ -498,6 +498,106 @@ interface IExecutorEnv {
 }
 
 
+// File contracts/KKUBToken.sol
+
+// Original license: SPDX_License_Identifier: MIT
+// Sources flattened with hardhat v2.9.3 https://hardhat.org
+
+pragma solidity 0.8.18;
+
+
+
+
+
+
+
+
+
+
+
+
+contract KKUBToken is KAP20, Ownable {
+    constructor(
+    address _kyc,
+    address _committee,
+    address _transferRouter,
+    uint256 _acceptedKycLevel
+    )
+    KAP20(
+        "Wrapped KUB",
+        "KKUB",
+        18,
+        _kyc,
+        _committee,
+        _transferRouter,
+        _acceptedKycLevel
+    )
+    {}
+
+    function mint(address to, uint256 amount) public onlyOwner {
+        _mint(to, amount);
+    }
+
+    function pause() external onlyOwner {
+        _pause();
+    }
+
+    function unpause() external onlyOwner {
+        _unpause();
+    }
+}
+
+
+// File contracts/KUSDTToken.sol
+
+// Original license: SPDX_License_Identifier: MIT
+// Sources flattened with hardhat v2.9.3 https://hardhat.org
+
+pragma solidity 0.8.18;
+
+
+
+
+
+
+
+
+
+
+
+
+contract KUSDTToken is KAP20, Ownable {
+    constructor(
+    address _kyc,
+    address _committee,
+    address _transferRouter,
+    uint256 _acceptedKycLevel
+    )
+    KAP20(
+        "Wrapped USDT",
+        "KUSDT",
+        18,
+        _kyc,
+        _committee,
+        _transferRouter,
+        _acceptedKycLevel
+    )
+    {}
+
+    function mint(address to, uint256 amount) public onlyOwner {
+        _mint(to, amount);
+    }
+
+    function pause() external onlyOwner {
+        _pause();
+    }
+
+    function unpause() external onlyOwner {
+        _unpause();
+    }
+}
+
+
 // File contracts/shared/abstracts/AccessControllerSDK.sol
 
 // Original license: SPDX_License_Identifier: MIT
@@ -612,54 +712,4 @@ contract KAP20SDK is KAP20, IKAP20SDK, AccessControllerSDK {
   function burn(address _from, uint256 _amount) external onlyOwnerOrHolder(_from) whenNotPaused {
     _burn(_from, _amount);
   }
-}
-
-
-// File contracts/XToken.sol
-
-// Original license: SPDX_License_Identifier: MIT
-// Sources flattened with hardhat v2.9.3 https://hardhat.org
-
-pragma solidity 0.8.18;
-
-
-
-
-
-
-
-
-
-
-
-
-contract XToken is KAP20, Ownable {
-    constructor(
-    address _kyc,
-    address _committee,
-    address _transferRouter,
-    uint256 _acceptedKycLevel
-    )
-    KAP20(
-        "Wrapped USDT",
-        "KUSDT",
-        18,
-        _kyc,
-        _committee,
-        _transferRouter,
-        _acceptedKycLevel
-    )
-    {}
-
-    function mint(address to, uint256 amount) public onlyOwner {
-        _mint(to, amount);
-    }
-
-    function pause() external onlyOwner {
-        _pause();
-    }
-
-    function unpause() external onlyOwner {
-        _unpause();
-    }
 }
