@@ -1,8 +1,7 @@
 import { ethers } from "hardhat";
 import { setAddress } from "../utils/address.util";
 async function main() {
-  const contractName = "KUSDCToken";
-
+  const contractName = "WTKToken";
   const xToken = await ethers.deployContract(contractName, [
     "0x0B80357691c27c0c9Ba25123F832190C0b86aCA1",
     "0x5bcDFb971d6622eEf0bFcAf7EcB6120a822B1Cd3",
