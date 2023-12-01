@@ -23,7 +23,7 @@ $ npx hardhat flatten > Flattened.sol
 ```
 
 ```shell
-$ npx hardhat flatten contracts/Foo.sol
+$ npx hardhat flatten contracts/{contract_name}.sol > {flatten_folder}/{flatten_name}.sol
 ```
 
 
